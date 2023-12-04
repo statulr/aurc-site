@@ -1,0 +1,69 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+
+<Layout>
+  <main class="flex flex-1 flex-col items-center justify-center">
+    <hgroup class="text-center">
+      <h1 class="text-5xl my-2 font-gesitMonoMedium">Aurc</h1>
+      <p class="font-geistRegSemiBold text-xl text-white/70">
+        Swift Solution for Arch Packages
+      </p>
+    </hgroup>
+    <p class="w-1/3 my-4 text-xl font-geistRegSemiBold text-center">
+      <span class="font-gesitMonoMedium">Aurc</span> is designed for efficiency
+      and speed in managing Arch User Repository packages.
+    </p>
+    <div
+      class="font-gesitMonoMedium flex items-center gap-3 bg-gray-800 p-3 rounded-md"
+    >
+      <p class="font-gesitMonoMedium">
+        yay -S aurc <span class="text-white/25"># Download it from the aur</span
+        >
+      </p>
+      <svg
+        id="copy"
+        class="fill-white/50 focus:outline-none"
+        height="16"
+        width="16"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M104.6 48H64C28.7 48 0 76.7 0 112V384c0 35.3 28.7 64 64 64h96V400H64c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H80c0 17.7 14.3 32 32 32h72.4C202 108.4 227.6 96 256 96h62c-7.1-27.6-32.2-48-62-48H215.4C211.6 20.9 188.2 0 160 0s-51.6 20.9-55.4 48zM144 56a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zM448 464H256c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16l140.1 0L464 243.9V448c0 8.8-7.2 16-16 16zM256 512H448c35.3 0 64-28.7 64-64V243.9c0-12.7-5.1-24.9-14.1-33.9l-67.9-67.9c-9-9-21.2-14.1-33.9-14.1H256c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64z"
+        ></path></svg
+      >
+      <svg
+        id="check"
+        class="hidden"
+        height="16"
+        width="14"
+        viewBox="0 0 448 512"
+      >
+        <path
+          d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+        ></path></svg
+      >
+    </div>
+  </main>
+</Layout>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+
+  const command = "yay -S aurc";
+  tippy("#copy", { content: "Copy the command" });
+
+  const copyIocn = document.getElementById("copy") as HTMLElement;
+  const check = document.getElementById("check") as HTMLElement;
+  copyIocn.addEventListener("click", () => {
+    navigator.clipboard.writeText(command);
+    copyIocn.setAttribute("class", "hidden");
+    check.setAttribute("class", "fill-green-500/30");
+    tippy("#check", { content: "Copied" });
+    setTimeout(() => {
+      check.setAttribute("class", "hidden");
+      copyIocn.setAttribute("class", "fill-white/50 focus:outline-none");
+    }, 1500);
+  });
+</script>
