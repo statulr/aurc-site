@@ -14,3 +14,5 @@ The `aurc.run` website source code. See it on [aurc.run](https://aurc.run)
 - `pnpm dev` To start the dev server
 - `pnpm build` To build the static site into `./build`
 - `pnpm preview` To preview the builded site in `./build` ( no dev environment )
+
+Special shoutout to [@Hamza12700](https://github.com/Hamza12700)
