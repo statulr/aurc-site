@@ -12,7 +12,8 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.6.4",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "prettier": "^3.1.0",
