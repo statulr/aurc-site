@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        gesitMedium: ["Geist Medium"],
+        gesitMonoMedium: ["Geist Mono Medium"],
+        geistRegSemiBold: ["Gesit Regular SemiBold"],
       },
     },
   },
