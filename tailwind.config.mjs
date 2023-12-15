@@ -4,8 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        gesitMonoMedium: ["Geist Mono Medium"],
-        geistRegSemiBold: ["Gesit Regular SemiBold"],
+        normal: ["system-ui", "sans-serif"],
+        mono: [
+          "ui-monospace",
+          "Roboto",
+          "Cascadia Code",
+          "Source Code Pro",
+          "Menlo",
+          "Consolas",
+          "DejaVu Sans Mono",
+          "monospace",
+        ],
       },
     },
   },
