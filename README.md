@@ -1,6 +1,6 @@
 # Aurc - Website
 
-The `aurc.run` website source code. See it on [aurc.run](https://aurc.run)
+The `aurc.run` (INACTIVE) website source code. See it on [aurc.run](https://aurc.run) (THIS DOMAIN IS DEPRACATED/EXPIRED ANY NEW CONTENT UNLESS NOTED IN THIS GITHUB IS NOT MINE)
 
 ## Get Started
 
